@@ -1,0 +1,15 @@
+{
+    "name": "genus/proyecto-practica-genus",
+    "description": "Proyecto de practica en clase de estructuracion mvc en php con estandar composer psr-4",
+    "type": "project",
+    "require": {
+        "php": ">=8.5.12",
+        "vlucas/phpdotenv": "^5.8"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

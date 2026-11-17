@@ -33,8 +33,7 @@ function login(): void
         exit;
     }
 
-    $pdo = Database::getConnection();
-    $userModel = new UserModel($pdo);
+    $userModel = new UserModel();
     $user = $userModel->findByEmail($email);
 
     if ($user === null || !password_verify($password, $user['password'])) {

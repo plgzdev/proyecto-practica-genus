@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace App\Models;
 
-use App\Contracts\UserModelInterface;
+use App\Config\Database;
 use PDO;
 
-class UserModel implements UserModelInterface
+class UserModel
 {
     private PDO $db;
 
-    public function __construct(PDO $db)
+    public function __construct()
     {
-        $this->db = $db;
+        $this->db = Database::getConnection();
     }
 
     public function findByEmail(string $email): ?array
